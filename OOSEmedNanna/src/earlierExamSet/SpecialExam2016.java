@@ -27,6 +27,9 @@ public class SpecialExam2016 {
 			super(x, y);
 			setZ(z);
 		}
+		public String toString(){
+			return "("+getX()+","+getY()+","+z+")";
+		}
 	}
 	//Question 10 end
 public static void main(String Args[]){
@@ -36,7 +39,6 @@ public static void main(String Args[]){
 	A[] array = {a,b};
 	for (A obj : array)
 		System.out.println(obj);
-	System.out.println(b.z);
 	//Question 10 end
 	}
 }
