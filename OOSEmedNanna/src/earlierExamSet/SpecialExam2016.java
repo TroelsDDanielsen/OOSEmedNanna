@@ -1,6 +1,34 @@
 package earlierExamSet;
 
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
 public class SpecialExam2016 {
+
+	//Question 4
+	public static void Question4(){
+		int[] a = {1,2,3,4,5,6,7,8};
+		int sum1 = 0; int sum2 = 0;
+		for (int i : a)
+			if (i%2==0)
+				sum1 +=i;
+			else
+				sum2+=i;
+			System.out.println(sum1);
+			System.out.println(sum2);
+	}//Question 4 end
+	//Question 9:
+	static class Point{
+		int x,y;
+		public String toString(){
+			return "("+x+","+y+")";
+		}
+	}//Question 9 end
 	//Question 10:
 	static class A{
 		private int x, y;
@@ -32,13 +60,80 @@ public class SpecialExam2016 {
 		}
 	}
 	//Question 10 end
+	
+	
 public static void main(String Args[]){
+	javax.swing.SwingUtilities.invokeLater(new Runnable(){
+		public void run(){
+			JFrame window = new JFrame("Main window");
+			JButton button = new JButton("Button");
+			JTextField textField = new JTextField("Goodbye");
+			button.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					if (textField.getText().equals("Hallo")){
+						textField.setText("GoodBye");
+					}
+					else{
+						textField.setText("Hallo");
+					}
+				}
+			});
+			window.getContentPane().add(button, BorderLayout.LINE_END);
+			window.getContentPane().add(textField,BorderLayout.CENTER);
+			window.setVisible(true);
+		}
+	});
 	//Question 10:
-	A a = new A(4,5);
+	/*A a = new A(4,5);
 	B b = new B(1,2,3);
 	A[] array = {a,b};
 	for (A obj : array)
 		System.out.println(obj);
+	*/
+
 	//Question 10 end
-	}
+	//Question 4 start 
+	/*
+	Question4();
+	Point p = new Point();
+	Point q = p;
+	q.x = 3;
+	q.y = 5;
+	q = null;
+	System.out.println(p);
+	Point r = new Point();
+	p=r;
+	System.out.println(p);
+	 //Question 4 end
+	//Question 17:
+	Runnable runnableObject1 = new Runnable(){
+		public void run(){
+			for (int i = 1; i < 5; i++){
+				System.out.println(i);
+				try{Thread.sleep(10);
+				}
+				catch(InterruptedException e){
+					e.printStackTrace();
+				}
+			}
+		}
+	};
+	Runnable runnableObject2 = new Runnable(){
+		public void run(){
+			for (String s : new String[]{"a","b","c","d","e"}){
+				System.out.println(s);
+				try{Thread.sleep(10);
+				}
+				catch(InterruptedException e){
+					e.printStackTrace();
+				}
+			}
+		}
+	};
+	Thread t1 = new Thread(runnableObject1);
+	Thread t2 = new Thread(runnableObject2);
+	t1.start();
+	t2.start();*/
+	
+}
 }
