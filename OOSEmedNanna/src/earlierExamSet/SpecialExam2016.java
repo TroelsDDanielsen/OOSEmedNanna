@@ -7,11 +7,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-//Jeg hedder hans!
-//Hedder du nu også det!
+ 
 public class SpecialExam2016 {
 
-	//Question 4
+	// b6eggg Question 4
 	public static void Question4(){
 		int[] a = {1,2,3,4,5,6,7,8};
 		int sum1 = 0; int sum2 = 0;
