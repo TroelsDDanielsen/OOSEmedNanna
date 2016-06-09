@@ -60,6 +60,22 @@ public class SpecialExam2016 {
 		}
 	}
 	//Question 10 end 
+	/*// Question 11
+	public interface I{
+		int multiply(int a, int b);
+		double add(double a, double b);
+	}
+	public static class hans implements I{
+
+	public int multiply(int a, int b){
+		return a*b;
+	}
+	public double add(double a, double b){
+		return a*b;
+	}	
+}
+Question 11 end
+*/
 	//Question 16 start
 		
 		static class Glob{
@@ -154,7 +170,13 @@ public static void main(String Args[]){
 	Thread t1 = new Thread(runnableObject1);
 	Thread t2 = new Thread(runnableObject2);
 	t1.start();
-	t2.start();*/
+	t2.start();
 	
+	//Question 11 Start
+		hans m = new hans();
+		System.out.println(m.multiply(3, 4));
+		System.out.println(m.add(5, 2));
+	//Question 11 end
+	*/
 }
 }
