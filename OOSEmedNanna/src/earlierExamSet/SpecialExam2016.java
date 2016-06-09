@@ -59,7 +59,7 @@ public class SpecialExam2016 {
 			return "("+getX()+","+getY()+","+z+")";
 		}
 	}
-	//Question 10 end
+	//Question 10 end 
 	//Question 16 start
 		
 		static class Glob{
