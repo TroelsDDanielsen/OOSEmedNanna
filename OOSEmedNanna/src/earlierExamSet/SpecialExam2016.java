@@ -60,10 +60,27 @@ public class SpecialExam2016 {
 		}
 	}
 	//Question 10 end
-	
+	//Question 16 start
+		
+		static class Glob{
+			static int numGlobs;
+			int id;
+			public Glob() {
+				numGlobs++;
+				id = numGlobs;
+			}
+		}
+		//Question 16 end
+
 	
 public static void main(String Args[]){
-	javax.swing.SwingUtilities.invokeLater(new Runnable(){
+	Glob[] a = new Glob[10];
+	for(int i = 0; i < 10; i++)
+		a[i] = new Glob();
+	for(Glob g : a)
+		System.out.println(g.id+" ");
+	 //Question 20 start
+	 javax.swing.SwingUtilities.invokeLater(new Runnable(){
 		public void run(){
 			JFrame window = new JFrame("Main window");
 			JButton button = new JButton("Button");
@@ -80,9 +97,13 @@ public static void main(String Args[]){
 			});
 			window.getContentPane().add(button, BorderLayout.LINE_END);
 			window.getContentPane().add(textField,BorderLayout.CENTER);
+			window.pack();
 			window.setVisible(true);
+			
+			
 		}
 	});
+	 //Question 20 end
 	//Question 10:
 	/*A a = new A(4,5);
 	B b = new B(1,2,3);
